@@ -13,18 +13,6 @@
     }
   }
 
-  .logo {
-    @include pos-center;
-    a {
-      display: block;
-    }
-    img {
-      display: block;
-      width: auto;
-      height: 20px;
-    }
-  }
-
   &-icon-btn {
     @include flexbox;
     width: 32px;
@@ -39,5 +27,65 @@
 
   &-search-btn {
     margin-right: 4px;
+  }
+
+  .logo {
+    @include pos-center;
+    a {
+      display: block;
+    }
+    img {
+      display: block;
+      width: auto;
+      height: 20px;
+    }
+  }
+
+  @include responsive(T) {
+    &-wrapper {
+      height: 80px;
+    }
+
+    &-left {
+      @include flexbox(start);
+    }
+
+    &-right {
+      @include flexbox(end);
+
+      .gnb-btn-group {
+        margin-right: 24px;
+
+        .gnb-icon-btn {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .logo {
+      position: static;
+      margin-right: 32px;
+      transform: none;
+
+      img {
+        height: 24px;
+      }
+    }
+
+    .btn-primary {
+      width: 88px;
+      i {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    &-right {
+      .input-group {
+        width: 264px;
+        margin-right: 24px;
+      }
+    }
   }
 }
