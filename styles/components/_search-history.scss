@@ -17,6 +17,10 @@
   &-item {
     @include flexbox(between);
     position: relative;
+    &:hover {
+      border-radius: 2px;
+      background-color: $background;
+    }
 
     .word-btn {
       @include text-style(16, $primary);
@@ -35,6 +39,10 @@
       height: $close-btn-size;
       font-size: 16px;
       color: $tertiary;
+
+      &:hover {
+        color: $border;
+      }
     }
   }
 
